@@ -8,8 +8,13 @@ function nestedTarget() {
 }
 
 function increaseRankBy(n) {
-  const lis = document.getElementById("app").querySelectorAll('ul.ranked-list li')
+  var lis = document.getElementById("app").querySelectorAll('ul.ranked-list li')
   for (let i = 0, l = lis.length ; i< l; i++) {
-    lis[i].innerHTML += n
+    var parsed = parseInt(lis[i].innerHTML, 10)
+     lis[i].innerHTML = parsed += n
     }
+}
+
+function deepestChild() {
+  return document.querySelector('#grand-node div div div div')
 }
